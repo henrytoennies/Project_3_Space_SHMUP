@@ -24,7 +24,7 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int currLevel = Mathf.FloorToInt(Hero.S.sheildLevel);
+        int currLevel = Mathf.FloorToInt(Hero.S.shieldLevel);
         
         if (levelShown != currLevel)
         {

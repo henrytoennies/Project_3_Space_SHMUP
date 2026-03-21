@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2973692495555501816}
   - component: {fileID: 6310479177303994521}
   - component: {fileID: 1229533943428239647}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8784374470043869376}
   - component: {fileID: 7219523448248119687}
   - component: {fileID: 8020265614667671452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WingR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 8639228350985378835}
   - component: {fileID: 4843387923894799704}
   - component: {fileID: 1999369433167249288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fuselage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,9 +302,10 @@ GameObject:
   - component: {fileID: 7973471898399193313}
   - component: {fileID: 3244691355852878055}
   - component: {fileID: -289215266947958416}
-  m_Layer: 0
+  - component: {fileID: -7351917870898173515}
+  m_Layer: 9
   m_Name: Enemy_4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,6 +357,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf11796fea6e0ee4c853342f24a1d25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+--- !u!114 &-7351917870898173515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081512991129725190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47978cfc88d92d44f93b3f686dc072c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: -2.5
+  keepOnScreen: 0
+  camWidth: 0
+  camHeight: 0
+  isOnScreen: 0
+  offRight: 0
+  offLeft: 0
+  offUp: 0
+  offDown: 0
 --- !u!1 &8981663006479369323
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +394,7 @@ GameObject:
   - component: {fileID: 8824891657741666316}
   - component: {fileID: 950285910858831552}
   - component: {fileID: 9155140733191368824}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WingL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
