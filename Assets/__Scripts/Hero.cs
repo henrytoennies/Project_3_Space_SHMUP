@@ -20,6 +20,9 @@ public class Hero : MonoBehaviour
     private float _shieldLevel = 1;
 
     private GameObject lastTriggerGo = null;
+    public delegate void WeaponFireDelegate();
+
+    public WeaponFireDelegate fireDelegate;
     
 
     void Awake()
@@ -52,18 +55,10 @@ public class Hero : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetAxis("Jump") == 1 && fireDelegate != null)
         {
-            TempFire();
+            fireDelegate();
         }
-    }
-
-    void TempFire()
-    {
-        GameObject projGo = Instantiate(projectilePrefab);
-        projGo.transform.position = transform.position;
-        Rigidbody rigidB = projGo.GetComponent<Rigidbody>();
-        rigidB.velocity = Vector3.up * projectileSpeed;
     }
 
     void OnTriggerEnter(Collider other)
@@ -75,6 +70,7 @@ public class Hero : MonoBehaviour
         {
             return;
         }
+        lastTriggerGo = go;
 
         if (go.tag == "Enemy")
         {
