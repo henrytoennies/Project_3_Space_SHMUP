@@ -301,7 +301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7973471898399193313}
   - component: {fileID: 3244691355852878055}
-  - component: {fileID: -289215266947958416}
   - component: {fileID: -7351917870898173515}
   - component: {fileID: 3169278333783183890}
   m_Layer: 9
@@ -346,22 +345,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &-289215266947958416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5081512991129725190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf11796fea6e0ee4c853342f24a1d25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  fireRate: 0.3
-  health: 10
-  score: 100
 --- !u!114 &-7351917870898173515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,8 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47978cfc88d92d44f93b3f686dc072c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: -2.5
-  keepOnScreen: 0
+  radius: 3.5
+  keepOnScreen: 1
   camWidth: 0
   camHeight: 0
   isOnScreen: 0
@@ -395,6 +378,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb634c4dd4dd16f4fa3d26586323ced7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  showDamageDuration: 0.1
+  powerUpDropChance: 0.5
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
+  parts:
+  - name: Cockpit
+    health: 10
+    protectedBy:
+    - Fuselage
+    go: {fileID: 0}
+    mat: {fileID: 0}
+  - name: Fuselage
+    health: 10
+    protectedBy:
+    - WingL
+    - WingR
+    go: {fileID: 0}
+    mat: {fileID: 0}
+  - name: WingL
+    health: 10
+    protectedBy: []
+    go: {fileID: 0}
+    mat: {fileID: 0}
+  - name: WingR
+    health: 10
+    protectedBy: []
+    go: {fileID: 0}
+    mat: {fileID: 0}
 --- !u!1 &8981663006479369323
 GameObject:
   m_ObjectHideFlags: 0

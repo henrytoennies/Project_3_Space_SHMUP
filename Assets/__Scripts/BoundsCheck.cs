@@ -43,7 +43,6 @@ public class BoundsCheck : MonoBehaviour
         if (pos.x < -camWidth + radius)
         {
             pos.x = -camWidth + radius;
-            isOnScreen = false;
             offLeft = true;
         }
 
