@@ -72,7 +72,7 @@ public class Hero : MonoBehaviour
         if (go.tag == "Enemy")
         {
             shieldLevel--;
-            Destroy(go);
+            Main.S.shipDestroyed(go.GetComponent<Enemy>());
         } else if (go.tag == "PowerUp")
         {
           AbsorbPowerUp(go);  

@@ -46,6 +46,8 @@ public class Enemy_4 : Enemy
                 prt.go = t.gameObject;
                 prt.mat = prt.go.GetComponent<Renderer>().material;
             }
+
+            health += Main.S.level / 5 * 5;   
         }
     }
 
@@ -145,7 +147,6 @@ public class Enemy_4 : Enemy
                     prtHit = FindPart(goHit);
                 }
 
-                print("part hit: " + prtHit.name);
                 if (prtHit.protectedBy != null)
                 {
                     foreach(string s in prtHit.protectedBy)

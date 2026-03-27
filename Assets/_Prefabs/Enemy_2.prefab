@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5676305862619388449}
   - component: {fileID: 1268913476021503300}
-  - component: {fileID: -8853895551779221676}
   - component: {fileID: 8719939117528609575}
   - component: {fileID: -915276451567205903}
   m_Layer: 9
@@ -54,29 +53,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &-8853895551779221676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180248641634455301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf11796fea6e0ee4c853342f24a1d25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  fireRate: 0.3
-  health: 10
-  score: 100
-  showDamageDuration: 0.1
-  powerUpDropChance: 0.5
-  originalColors: []
-  materials: []
-  showingDamage: 0
-  damageDoneTime: 0
-  notifiedOfDestruction: 0
 --- !u!114 &8719939117528609575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47978cfc88d92d44f93b3f686dc072c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: -3
   keepOnScreen: 0
   camWidth: 0
   camHeight: 0
@@ -115,7 +91,7 @@ MonoBehaviour:
   health: 10
   score: 100
   showDamageDuration: 0.1
-  powerUpDropChance: 1
+  powerUpDropChance: 0.5
   originalColors: []
   materials: []
   showingDamage: 0

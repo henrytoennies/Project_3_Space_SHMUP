@@ -39,9 +39,7 @@ public class Enemy_2 : Enemy
 
         if (u > 1)
         {
-            Destroy(gameObject);
-
-            return;
+            birthTime = Time.time;
         }
 
         u = u + sinEccentricity * Mathf.Sin(u * Mathf.PI * 2);

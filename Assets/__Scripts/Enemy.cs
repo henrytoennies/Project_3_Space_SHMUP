@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShortcutManagement;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -33,8 +30,9 @@ public class Enemy : MonoBehaviour
         {
             originalColors[i] = materials[i].color;
         }
-    } 
 
+        health += Main.S.level / 5 * 5;   
+    } 
 
     public Vector3 pos
     {
@@ -58,7 +56,9 @@ public class Enemy : MonoBehaviour
 
         if (bndCheck != null && bndCheck.offDown)
         {
-            Destroy(gameObject);
+            Vector3 tempPos = pos;
+            tempPos.y *= -1;
+            pos = tempPos;
         }
     }
 
@@ -95,7 +95,6 @@ public class Enemy : MonoBehaviour
                         Main.S.shipDestroyed(this);
                     }
                     notifiedOfDestruction = true;
-                    Destroy(gameObject);
                 }
 
                 Destroy(otherGO);

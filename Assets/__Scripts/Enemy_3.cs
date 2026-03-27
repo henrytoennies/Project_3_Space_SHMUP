@@ -40,8 +40,7 @@ public class Enemy_3 : Enemy
 
         if (u > 1)
         {
-            Destroy(gameObject);
-            return;
+            birthTime = Time.time;
         }
 
         Vector3 p01, p12;
